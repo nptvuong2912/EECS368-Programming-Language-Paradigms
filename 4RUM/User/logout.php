@@ -1,7 +1,7 @@
 <?php
 
     // connection to the database and start the session
-    require("../../common.php"); 
+    require("../common.php"); 
 
     // We remove the user's data from the session
     unset($_SESSION['user']);

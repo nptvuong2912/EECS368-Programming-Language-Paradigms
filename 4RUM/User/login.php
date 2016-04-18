@@ -1,7 +1,7 @@
  <?php
 
     // Connection to the database and start the session
-    require("common.php"); 
+    require("../common.php"); 
 
 
     $userid = $_POST['userid'];
@@ -53,4 +53,4 @@
     <input type="submit" value="Login" />
 </form>
 <a href="register.html">Register</a>
-<a href="main.html">Back to main</a>
+<a href="../main.html">Back to main</a>

@@ -1,7 +1,7 @@
 <?php
 
 //Execute the common code to connect to database
-require("common.php");
+require("../common.php");
 
 $userid = $_POST['userid'];
 $password = $_POST['password'];

@@ -1,7 +1,7 @@
 <?php
 
     // connection to the database and start the session
-    require("common.php"); 
+    require("../common.php"); 
 
     $post = $_POST['post'];
     $userid = $_SESSION['user']['user_id']; //current user
@@ -13,7 +13,6 @@
             die ("Enter a post");
         }
     }
-
 
      //Insert post accorading to existing user id
             $query = "INSERT INTO Posts (content, author_id) VALUES ('$post', '$userid')";
