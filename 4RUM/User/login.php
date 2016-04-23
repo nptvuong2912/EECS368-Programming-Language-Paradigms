@@ -3,7 +3,6 @@
     // Connection to the database and start the session
     require("../common.php"); 
 
-
     $userid = $_POST['userid'];
     $password = $_POST['password'];
 
