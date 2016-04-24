@@ -4,7 +4,6 @@
 </head>
 <body>
 	<?php
-
 		// connection to the database and start the session
 		require("../common.php"); 
 
@@ -20,16 +19,16 @@
 		}
 
 		 //Insert post accorading to existing user id
-				$query = "INSERT INTO Posts (content, author_id) VALUES ('$post', '$userid')";
-				$result = $conn->query($query);
+			$query = "INSERT INTO Posts (content, author_id) VALUES ('$post', '$userid')";
+			$result = $conn->query($query);
 
-				if(!$result) {
-					die("Failed to run query: ");
-				}
+			if(!$result) {
+				die("Failed to run query: ");
+			}
 
 	?>
 	Successfully added new post. <br> <br>
-	<a href="CreatePosts.html">Write another post</a><br />
+	<a href="write-post.html">Write another post</a><br />
 	<a href="private.php">Back to 4RUM</a><br />
 	<a href="logout.php">Logout</a>
 </body>

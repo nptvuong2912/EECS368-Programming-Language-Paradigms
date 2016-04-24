@@ -34,7 +34,7 @@
 			if($hash !== null) { 
 				$query = "UPDATE Users SET password = '$hash' WHERE user_id = '$userid'";
 				$result = $conn->query($query);
-
+				
 				if(!$result) {
 					die("Failed to run query: ");
 				}
@@ -57,5 +57,7 @@
 		<br /><br /> 
 		<input type="submit" value="Update" /> 
 	</form>
+	<a href="private.php">Back to 4RUM</a><br />
+	<a href="logout.php">Logout</a>
 </body>
 </html>	

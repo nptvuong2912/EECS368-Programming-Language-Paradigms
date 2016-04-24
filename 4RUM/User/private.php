@@ -26,14 +26,16 @@
 				if($result->num_rows === 0) {
 					echo "No post submitted";
 				} else {
-					//build the table of Post ID and Content from $author
+					//build the table of Post ID and Content from the authors
 					echo "<table>";
 					echo "<tr>";
-							echo "<th>Author</th>";
-							echo "<th>Content</th>";
+						echo "<th>Post ID</th>";
+						echo "<th>Author</th>";
+						echo "<th>Content</th>";
 					echo "<tr>";
 					while($row = $result->fetch_assoc()) {
 						echo "<tr>";
+						echo "<td>" . $row['post_id'] . "</td>";
 						echo "<td>" . $row['author_id'] . "</td>"."<td>" . $row['content'] . "</td>";
 						echo "</tr>";
 					}
@@ -43,10 +45,10 @@
 					echo "<br><br>";
 				}
 		}
-
+		$conn->close();
 	?>
 	Username: <?php echo htmlentities($_SESSION['user']['user_id']); ?> <br> <br>
-	<a href="CreatePosts.html">Write a post</a><br />
+	<a href="write-post.html">Write a post</a><br />
 	<a href="edit.php"> Edit your profile </a> <br>
 	<a href="logout.php">Logout</a>
 </body>
