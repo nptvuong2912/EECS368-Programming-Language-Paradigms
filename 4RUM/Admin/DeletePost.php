@@ -33,6 +33,6 @@
     }
 
     echo "<br><a href='DeletePost.html'>Back to Delete Post</a>";
-    echo "<br><a href='AdminHome.html'>Back to Admin Home</a>";
+    echo "<br><a href='privateAdmin.php'>Back to Admin menu</a>";
 
 ?>

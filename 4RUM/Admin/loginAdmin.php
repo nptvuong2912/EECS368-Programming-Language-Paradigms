@@ -1,5 +1,4 @@
  <?php
-
     // Connection to the database and start the session
     require("../common.php"); 
 
@@ -44,7 +43,7 @@
 
 <h1>Admin Login</h1>
 <form action="loginAdmin.php" method="post">
-    User ID:<br />
+    Admin ID:<br />
     <input type="text" name="userid" />
     <br /><br />
     Password:<br />

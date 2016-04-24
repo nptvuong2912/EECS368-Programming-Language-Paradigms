@@ -19,4 +19,4 @@ Admin ID: <?php echo htmlentities($_SESSION['user']['user_id']); ?> <br> <br>
 <a href="ViewUsers.php">User list</a><br />
 <a href="ViewUserPosts.html">View posts</a><br />
 <a href="DeletePost.html">Delete posts</a><br />
-<a href="../User/logout.php">Logout</a>
+<a href="logoutAdmin.php">Logout</a>

@@ -1,5 +1,5 @@
-<?php
 
+<?php
     // onnection to the database and start the session
     require("../common.php"); 
 
@@ -47,7 +47,6 @@
     }
 
     echo "<br> <br> <a href='ViewUserPosts.html'>Select another user</a><br>";
-    echo "<a href='privateAdmin.php'>Back to Admin Home</a>";
-
+    echo "<a href='privateAdmin.php'>Back to Admin Menu</a>";
 
 ?>
