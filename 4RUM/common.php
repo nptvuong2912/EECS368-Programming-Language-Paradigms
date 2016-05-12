@@ -1,4 +1,9 @@
 <?php 
+	//Authors: Main Front End: Logan Ayer
+    //         Main Back End:  Vuong Nguyen 
+	//Date Last Edited: 5/9/2016 
+	//common.php connects us to the database
+	
 	
     // These variables define the connection information for your MySQL database 
     $username = "vnguyen42"; 

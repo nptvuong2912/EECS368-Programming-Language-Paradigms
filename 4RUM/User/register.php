@@ -1,4 +1,8 @@
 <?php
+			//Authors: Main Front End: Logan Ayer
+			//         Main Back End:  Vuong Nguyen 
+			//Date Last Edited: 5/9/2016 
+			//register.php inputs a new user into our database
 
 //Execute the common code to connect to database
 require("../common.php");

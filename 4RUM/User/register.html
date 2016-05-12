@@ -1,27 +1,146 @@
+<!-- Authors: Main Front End: Logan Ayer
+              Main Back End : Vuong Nguyen 
+	 Date Last Edited: 5/9/2016 
+	 register.html controls registration of users -->
 <html>
 <head>
-	<title> Register </title>
+	<title> Register for 4Rum</title>
+	<style>
+			/* background image with goal of maintaining size and position independent of browswer size */
+			html { 
+			 background: url(../4Rum.png) no-repeat center center fixed; 
+			 -webkit-background-size: cover;
+			 -moz-background-size: cover;
+			 -o-background-size: cover;
+			 background-size: cover;
+			}
+	
+			/* controls the header element at top of page
+            stays at top regardless of everything else */
+			#header {
+			 position:fixed;
+			 display:block;
+			 top: 0px;
+			 left: 0px;
+			 width:100%;
+			 height:40px;
+			 z-index: 10000;
+			 background:#EEEEEE;
+			 box-shadow: 0px 5px 5px #888888
+			}
+			
+			/* Thumbnail icon on right of header */
+			#headerlogo a {
+				background: url("../4RumHeader.png");
+				display: block;
+				height: 40px;
+				margin-right: 5px;
+				width: 100px;
+				text-indent: -9999px;
+				float:left;
+			}
+			
+			/* controls clickable elements of header on right side */
+			#header ul {
+			  margin:0;
+			  padding: 0;
+			  background: transparent;
+			  height:100%;
+			  margin-right:25px;
+			  padding-right:0px;
+			  padding-top:10px;
+			  float: right;
+			}
+			
+			/* keeps header elements 'inline' */
+			#header ul li {  
+			  display:inline-block;
+			  margin-left: 25px;
+			}
+			
+			/* formats text color and removes underline */
+			#header ul li a { 
+				padding-right:0px;
+				color:#000000;
+				text-decoration:none;
+			}
+			
+			/* hover animation - changes color and underlines the text */
+			#header ul li a:hover {
+				color:#999999; 
+				text-decoration: underline;
+			}
+
+			/* Background for the registration form */
+			#containerbg {
+			  position: absolute;
+			  width: 300px;
+			  height: 300px;
+			  top: 50px;
+			  left: 50%;
+			  margin: 0 0 0 -150px;
+			  background: #111111;
+			  border-radius: 8px;
+			  text-align: center;
+			  z-index: 1000;
+			}
+			
+			/* Actual registration form styling */
+			#container {
+			  position: absolute;
+			  width: 300px;
+			  height: 300px;
+			  color: #FFFFFF;
+			  top: 50px;
+			  left: 50%;
+			  margin: 0 0 0 -150px;
+			  background: transparent;
+			  text-align: center;
+			  z-index: 5000;
+			}			
+	</style>
 </head>
 
 <body>
+	<!-- All elements of the header -->
+	<div id="header">
+		<div id="headerlogo">
+			<a href="private.php"></a>
+		</div>
+		<ul>
+			<li>
+				<a href="login.php" title="Login">Login</a> 
+			</li>
+			<li>
+				<a href="../Admin/AdminHome.html" title="Admin">Admin</a> 
+			</li>
+		</ul>
+	</div>
+	
+	<!-- Background for the registration form -->
+  <div id="containerbg">
+  </div>
+  <!-- Div controlling the registration form -->
   <div id="container">
-    <h3>Create a new user or log in</h3>
+    <h2>Register a new User ID</h2>
 
-    <form method="post" action="register.php" >
+    <form id="register" method="post" action="register.php" >
       <div id="username-div" class="form-div">
-          <label>User ID:</label> <input type="text" name="userid" required> 
+          <label>User ID:</label><br>
+		  <input type="text" name="userid" required>
       </div>
-
       <div id="password-div" class="form-div">
-          <label>Password:</label> <input type="password" name="password" required> 
+          <br><label>Password:</label><br>
+		  <input type="password" name="password" id="password" required><br> 
+      </div>
+	  <div id="confirmpassword-div" class="form-div">
+          <label>Confirm Password:</label><br>
+		  <input type="password" name="confirmpassword" id="confirmpassword" required><br> 
       </div>
       <br>
-      <input type="submit" value="Sign up">
+      <input type="submit" value="Register">
     </form>
-    
-    <a href="login.php">Log in</a><br /> 
-    <a href="../main.html">Back to main</a><br /> 
-
+	
   </div>
 </body>
 

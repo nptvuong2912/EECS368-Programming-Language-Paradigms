@@ -2,7 +2,7 @@
 			//Authors: Main Front End: Logan Ayer
 			//         Main Back End:  Vuong Nguyen 
 			//Date Last Edited: 5/9/2016 
-			//write-post.php controls inputting posts into our database
+			//write-postAdmin.php controls inputting posts into our database from privateAdmin
 
 		// connection to the database and start the session
 		require("../common.php"); 
@@ -35,9 +35,9 @@
 		if(empty($_SESSION['user']))
 		{
 		   //If they are not, we redirect them to the login page.
-			header("Location: login.php");
+			header("Location: loginAdmin.php");
 
-			die("Redirecting to login.php");
+			die("Redirecting to loginAdmin.php");
 		}
 		
 		//Open 4RUM - Saved Posts

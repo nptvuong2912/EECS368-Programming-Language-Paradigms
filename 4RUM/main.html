@@ -1,26 +1,98 @@
+<!-- Authors: Main Front End: Logan Ayer
+              Main Back End : Vuong Nguyen 
+	 Date Last Edited: 5/9/2016 
+	 main.html is the entry page for 4Rum-->
 <!DOCTYPE html>
 <html> 
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title> 4RUM </title>
-		<style type="text/css">
+		<title>4Rum</title>
+		<style>
+		/* background image with goal of maintaining size and position independent of browswer size */
+			html { 
+			 background: url(4Rum.png) no-repeat center center fixed; 
+			 -webkit-background-size: cover;
+			 -moz-background-size: cover;
+			 -o-background-size: cover;
+			 background-size: cover;
+			}
+			
+		/* controls the header element at top of page
+           stays at top regardless of everything else */
+			#header {
+			 position:fixed;
+			 display:block;
+			 top: 0px;
+			 left: 0px;
+			 width:100%;
+			 height:40px;
+			 z-index: 10000;
+			 background:#EEEEEE;
+			 box-shadow: 0px 5px 5px #888888
+			}
+			
+			/* Thumbnail icon on right of header */
+			#headerlogo a {
+				background: url("4RumHeader.png");
+				display: block;
+				height: 40px;
+				margin-right: 5px;
+				width: 100px;
+				text-indent: -9999px;
+				float:left;
+			}
+
+			/* controls clickable elements of header on right side */
+			#header ul {
+			  margin:0;
+			  padding: 0;
+			  background: transparent;
+			  height:100%;
+			  margin-right:25px;
+			  padding-right:0px;
+			  padding-top:10px;
+			  float: right;
+			}
+			
+			/* keeps header elements 'inline' */
+			#header ul li {  
+			  display:inline-block;
+			  margin-left: 25px;
+			}
+			
+			/* formats text color and removes underline */
+			#header ul li a { 
+				padding-right:0px;
+				color:#000000;
+				text-decoration:none;
+			}
+			
+			/* hover animation - changes color and underlines the text */
+			#header ul li a:hover {
+				color:#999999; 
+				text-decoration: underline;
+			}
 		</style>
-		
 	</head>
 	<body>
-		<div class="container">
-			<div class="header">
-				<h3> Welcome to 4RUM </h3>
-				<ul>
-					<li> <a href="User/login.php" > Log in  </a></li>
-					<li> <a href="User/register.html" > Register new user </a></li>
-					<li> <a href="Admin/AdminHome.html" > Admin page </a></li>   
-				   
-				</ul>
+	<!-- All elements of the header -->
+		<div id="header">
+			<div id="headerlogo">
+				<a href="User/private.php"></a>
 			</div>
-		</div>     
+			<ul>
+				<li>
+					<a href="User/login.php" title="Login">Login</a> 
+				</li>
+				<li>
+					<a href="User/register.html" title="Register">Register</a> 
+				</li>
+				<li>
+					<a href="Admin/AdminHome.html" title="Admin">Admin</a> 
+				</li>
+			</ul>
+		</div>
 	</body>
-
-</html> 
+</html>
